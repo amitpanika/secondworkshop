@@ -17,6 +17,21 @@ public class TicTacToeGame {
         System.out.println("enter your placement ( 1-9):");
         int pos = scanner.nextInt();
         System.out.println(pos);
+
+        printGameBoard(gameboard);
+    }
+
+    private static void printGameBoard(char[][] gameBoard) {
+        for (char[] row : gameBoard) {
+            for (char c : row){
+                System.out.print(c);
+            }
+            System.out.println();
+        }
+
+
+    }
+    public static void placepiece(char[][] gameboard, int pos, String user){
         switch (pos) {
             case 1:
                 gameboard[0][0] = 'X';
@@ -46,17 +61,6 @@ public class TicTacToeGame {
                 gameboard[4][4] = 'X';
                 break;
         }
-        printGameBoard(gameboard);
-    }
-
-    private static void printGameBoard(char[][] gameBoard) {
-        for (char[] row : gameBoard) {
-            for (char c : row){
-                System.out.print(c);
-            }
-            System.out.println();
-        }
-
 
     }
 
